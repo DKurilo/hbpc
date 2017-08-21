@@ -12,9 +12,9 @@ Print memory.pdf. Cut apart horizontal lines and glue them together. You need to
 Make a construction like on the image below.
 I used Lego, but you can use anything you want.
 Self test:  
-[[https://github.com/DKurilo/hbpc/blob/master/img/HBPC-1-self-test.jpg|alt=Human Based Paper Computer - 1: Self Test]]
+![alt Human Based Paper Computer - 1: Self Test](https://raw.githubusercontent.com/DKurilo/hbpc/master/HBPC-1-self-test.jpg)
 Ready to work:  
-[[https://github.com/DKurilo/hbpc/blob/master/img/HBPC-1-ready-to-work.jpg|alt=Human Based Paper Computer - 1: Ready to work]]
+![alt Human Based Paper Computer - 1: Ready to work](https://raw.githubusercontent.com/DKurilo/hbpc/master/HBPC-1-ready-to-work.jpg)
 The bottom panel is your CPU. It contains working register and 3 flags: overflow flag, negative flag and equal flag. Very simple.  
 The top panel is I/O module. We have very simple I/O. It contains 7 8-segment indicators and 8 buttons.  
 Also it's better to use a pencil and eraser, not a pen. So you will be able to rewrite memory.  
