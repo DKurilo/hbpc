@@ -32,7 +32,7 @@ If you want to use two or more operand instructions, it's possible that you need
 ## Instruction set
 
 We have a human based main Arithmetic Logic unit. So you can use any instruction set you want.  
-I tried to make some base instruction set. Here are our opcodes:  
+I tried to make some basic instruction set. Here are our opcodes:  
 
 ### Instruction Set Nomenclature
 
