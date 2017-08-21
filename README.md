@@ -82,7 +82,7 @@ rs - (00011001) - right shift. Shift R to the right (it's equal to division by 2
 
 1. Running light
 
-```
+```asm
 00001000: setR 00000001  # we start from the first segment  
 00001010: mov 00000001   # the first segment is lit  
 00001100: ld 00000001    # load current segments  
