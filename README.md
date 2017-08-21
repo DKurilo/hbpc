@@ -83,23 +83,23 @@ rs - (00011001) - right shift. Shift R to the right (it's equal to division by 2
 1. Running light
 
 ```asm
-00001000: setR 00000001  # we start from the first segment  
-00001010: mov 00000001   # the first segment is lit  
-00001100: ld 00000001    # load current segments  
-00001110: cp 00100011    # if the last segment is on  
-00010000: setR 00001000  # we start a new cycle  
+00001000: setR 00000001  ; we start from the first segment  
+00001010: mov 00000001   ; the first segment is lit  
+00001100: ld 00000001    ; load current segments  
+00001110: cp 00100011    ; if the last segment is on  
+00010000: setR 00001000  ; we start a new cycle  
 00010010: jmpE  
-00010011: ld 00000001    # load current segments  
-00010101: ls             # move a segment  
-00010110: mov 00000001   # and send it to output  
-00011000: ld 00000000    # load buttons  
-00011010: cp 00100100    # compare to our mask (you can change the program to check for the exact button, think how to do it)  
-00011100: setR 00100101  # if the button is pressed, end the program  
-00011110: jmpNE          # in case any button is pressed end the program  
-00011111: setR 00001100  # else go to "light the next segment" part  
+00010011: ld 00000001    ; load current segments  
+00010101: ls             ; move a segment  
+00010110: mov 00000001   ; and send it to output  
+00011000: ld 00000000    ; load buttons  
+00011010: cp 00100100    ; compare to our mask (you can change the program to check for the exact button, think how to do it)  
+00011100: setR 00100101  ; if the button is pressed, end the program  
+00011110: jmpNE          ; in case any button is pressed end the program  
+00011111: setR 00001100  ; else go to "light the next segment" part  
 00100001: jmp  
-00100010: nop            # just nop  
-00100011: 10000000       # constant to find if the last segment is lit  
-00100100: 00000000       # mask for the button  
+00100010: nop            ; just nop  
+00100011: 10000000       ; constant to find if the last segment is lit  
+00100100: 00000000       ; mask for the button  
 00100101: nop  
 ```
