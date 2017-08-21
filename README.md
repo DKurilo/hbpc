@@ -9,8 +9,8 @@ Sorry, I'm not a specialist in CPU developing. So this is just a simplification.
 ## Assembly
 
 Print memory.pdf. Cut apart horizontal lines and glue them together. You need to glue as much lines as you need for your program. It's the memory of your computer.  
-Make a construction like on the image below.
-I used Lego, but you can use anything you want.
+Make a construction like on the image below.  
+I used Lego, but you can use anything you want.  
 Self test:  
 ![alt Human Based Paper Computer - 1: Self Test](https://raw.githubusercontent.com/DKurilo/hbpc/master/HBPC-1-self-test.jpg)
 Ready to work:  
@@ -22,11 +22,11 @@ Also it's better to use a pencil and eraser, not a pen. So you will be able to r
 ## How it works
 
 You need to write a program in your computer memory. Use a pen, write an instruction, if the instruction requires data, the next cell is for the data.  
-Surely, you can code instructions and use numbers for them. And if you want to show how stack overflow or any other simple vulnerabilities work you need to write code near the instruction, but it's easier for a child to use instruction names instead of code.
+Surely, you can code instructions and use numbers for them. And if you want to show how stack overflow or any other simple vulnerabilities work you need to write code near the instruction, but it's easier for a child to use instruction names instead of code.  
 Place the memory in your computer. First cell is in the working window.  
-And "turn on"!
+And "turn on"!  
 Empty cell is "nop" instruction, so you can just go to the next instruction.  
-Read the instruction in working window. If it's a single instruction (like nop) do what you need to do as you are a CPU. If it's one or more operand instruction, move to the next block and read data. Then perform the action you can use a separate piece of paper to make calculations.  
+Read the instruction in working window. If it's a single instruction (like nop) do what you need to do as you are a CPU. If it's one or more operand instruction, move to the next block and read data. Then perform the action. You can use a separate piece of paper to make calculations.  
 If you want to use two or more operand instructions, it's possible that you need to upgrade your CPU and use more inner registers.  
 
 ## Instruction set
@@ -69,7 +69,7 @@ jmpE - (00001110) - If flag E is 1, jump to register with adress in R. You need 
 jmpNE - (00001111) - If flag E is 0, jump to register with adress in R. You need to move your memory to the proper place. Otherwise just skip.  
 jmpV - (00010000) - If flag V is 1 (overflow), jump to register with adress in R. You need to move your memory to the proper place. Otherwise just skip.  
 jmpNV - (00010001) - If flag V is 0 (not overflow), jump to register with adress in R. You need to move your memory to the proper place. Otherwise just skip.  
-sum Rn - (00010010) - arithmetic summation R = R + Rn. In case of overflow you need to set V flag. Find cell Rn and add it to R.   
+sum Rn - (00010010) - arithmetic summation R = R + Rn. In case of overflow you need to set V flag. Find cell Rn and add it to R.  
 sub Rn - (00010011) - arithmetic substraction R = R - Rn. In case Rn is greater than R set N flag. Find cell Rn and substract it from R.  
 and Rn - (00010100) - logic 'and'. R = R and Rn. Find cell Rn and perform the operation on the CPU panel.  
 or Rn - (00010101) - logic 'or'. R = R or Rn. Find cell Rn and perform the operation on the CPU panel.  
@@ -83,23 +83,23 @@ rs - (00011001) - right shift. Shift R to the right (it's equal to division by 2
 1. Running light
 
 ```
-00001000 setR 00000001  # we start from the first segment  
-00001010 mov 00000001   # the first segment is lit  
-00001100 ld 00000001    # load current segments  
-00001110 cp 00100011    # if the last segment is on  
-00010000 setR 00001000  # we start a new cycle  
-00010010 jmpE  
-00010011 ld 00000001    # load current segments  
-00010101 ls             # move a segment  
-00010110 mov 00000001   # and send it to output  
-00011000 ld 00000000    # load buttons  
-00011010 cp 00100100    # compare to our mask (you can change the program to check for the exact button, think how to do it)  
-00011100 setR 00100101  # if the button is pressed, end the program  
-00011110 jmpNE          # in case any button is pressed end the program  
-00011111 setR 00001100  # else go to "light the next segment" part  
-00100001 jmp  
-00100010 nop            # just nop  
-00100011 10000000       # constant to find if the last segment is lit  
-00100100 00000000       # mask for the button  
-00100101 nop  
+00001000: setR 00000001  # we start from the first segment  
+00001010: mov 00000001   # the first segment is lit  
+00001100: ld 00000001    # load current segments  
+00001110: cp 00100011    # if the last segment is on  
+00010000: setR 00001000  # we start a new cycle  
+00010010: jmpE  
+00010011: ld 00000001    # load current segments  
+00010101: ls             # move a segment  
+00010110: mov 00000001   # and send it to output  
+00011000: ld 00000000    # load buttons  
+00011010: cp 00100100    # compare to our mask (you can change the program to check for the exact button, think how to do it)  
+00011100: setR 00100101  # if the button is pressed, end the program  
+00011110: jmpNE          # in case any button is pressed end the program  
+00011111: setR 00001100  # else go to "light the next segment" part  
+00100001: jmp  
+00100010: nop            # just nop  
+00100011: 10000000       # constant to find if the last segment is lit  
+00100100: 00000000       # mask for the button  
+00100101: nop  
 ```
