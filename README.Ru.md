@@ -12,9 +12,9 @@
 Соберите конструкцию подобную тому, что на картинке ниже.  
 Я использовал Lego, но можно использовать все, что взбредет в голову.  
 Все кнопки нажаты и все сегменты светятся:  
-[[https://github.com/DKurilo/hbpc/blob/master/img/HBPC-1-self-test.jpg|alt=Human Based Paper Computer - 1: Self Test]]
+![alt Human Based Paper Computer - 1: Self Test](https://raw.githubusercontent.com/DKurilo/hbpc/master/HBPC-1-self-test.jpg)
 Готов к работе:
-[[https://github.com/DKurilo/hbpc/blob/master/img/HBPC-1-ready-to-work.jpg|alt=Human Based Paper Computer - 1: Ready to work]]
+![alt Human Based Paper Computer - 1: Ready to work](https://raw.githubusercontent.com/DKurilo/hbpc/master/HBPC-1-ready-to-work.jpg)
 
 Нижняя панель - это ЦПУ. На панели регистр процессора и 3 флага: переполнение, флаг отрицательного числа, флаг равентсва. Все очень просто.  
 Верхняя панель - это модуль ввода вывода. Очень просто модуль. На нем 8 кнопок и 7 индикаторов, состоящих из 8 сегментов каждый.  
